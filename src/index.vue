@@ -12,6 +12,10 @@
       :enter-active-class="alignInCls"
       :leave-active-class="alignOutCls"
     >
+    <div @click.stop="close" v-if="closeable" class="close-btn">
+          <div class="leftright"></div>
+          <div class="rightleft"></div>
+        </div>
       <div
         key="content"
         :class="{ closeable, [align.toLowerCase()]: true }"
@@ -19,10 +23,6 @@
         class="vue-simple-drawer cover"
         :style="indexCls()"
       >
-        <div @click.stop="close" v-if="closeable" class="close-btn">
-          <div class="leftright"></div>
-          <div class="rightleft"></div>
-        </div>
         <slot></slot>
       </div>
     </transition>
