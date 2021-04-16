@@ -12,14 +12,6 @@
       :enter-active-class="alignInCls"
       :leave-active-class="alignOutCls"
     >
-<<<<<<< HEAD
-    <div style="display: flex;">
-    <div @click.stop="close" v-if="closeable" class="close-btn">
-          <div class="leftright"></div>
-          <div class="rightleft"></div>
-        </div>
-=======
->>>>>>> parent of b32e12b... change position
       <div
         key="content"
         :class="{ closeable, [align.toLowerCase()]: true }"
@@ -33,7 +25,6 @@
         </div>
         <slot></slot>
       </div>
-    </div>
     </transition>
   </div>
 </template>
